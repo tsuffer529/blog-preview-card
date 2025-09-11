@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* color */
+@theme {
+  --color-white: hsl(0, 0%, 100%);
+  --color-yellow: hsl(47, 88%, 63%);
+  
+  --color-gray-*: initial;
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* spacing */
+@theme {
+  --spacing-*: initial;
+  --spacing-0: 0;
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-300: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* shadow */
+@utility right-bottom-shadow {
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
+}
+
+/* Title */
+@utility title {
+  font-family: var(--font-figtree);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-gray-950);
+}
+
+/* Description */
+@utility description {
+  font-family: var(--font-figtree);
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-gray-500);
+}
+
+/* Publish Date */
+@utility publish-date {
+  font-family: var(--font-figtree);
+  font-weight: var(--font-weight-medium);
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-gray-950);
+}
+
+/* Category */
+@utility category {
+  font-family: var(--font-figtree);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-gray-950);
+}
+
+/* Author */
+@utility author {
+  font-family: var(--font-figtree);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--color-gray-950);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-yellow;
+  font-family: var(--font-figtree) Arial, Helvetica, sans-serif;
 }
