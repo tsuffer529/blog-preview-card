@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* breakpoint */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 375px;
+  --breakpoint-lg: 1440px;
+}
+
+@custom-variant sm (@media (min-width: theme(--breakpoint-sm)));
+@custom-variant lg (@media (min-width: theme(--breakpoint-lg)));
+
 /* color */
 @theme {
   --color-white: hsl(0, 0%, 100%);
@@ -20,59 +30,36 @@
   --spacing-300: 1.5rem;
 }
 
-/* shadow */
-@utility right-bottom-shadow {
-  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
-}
-
-/* Title */
-@utility title {
+@utility typo-1 {
   font-family: var(--font-figtree);
   font-weight: var(--font-weight-extrabold);
-  font-size: 20px;
+  font-size: clamp(1.25rem, 1.162rem + 0.38vw, 1.5rem); /* min:20px max:24px */
   line-height: 150%;
   letter-spacing: 0;
-  color: var(--color-gray-950);
 }
 
-/* Description */
-@utility description {
+@utility typo-2 {
   font-family: var(--font-figtree);
   font-weight: var(--font-weight-medium);
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem); /* min:14px max:16px */
   line-height: 150%;
   letter-spacing: 0;
-  color: var(--color-gray-500);
 }
 
-/* Publish Date */
-@utility publish-date {
+@utility typo-3 {
   font-family: var(--font-figtree);
   font-weight: var(--font-weight-medium);
-  font-size: 12px;
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem); /* min:12px max:14px */
   line-height: 150%;
   letter-spacing: 0;
-  color: var(--color-gray-950);
 }
 
-/* Category */
-@utility category {
-  font-family: var(--font-figtree);
-  font-weight: var(--font-weight-extrabold);
-  font-size: 12px;
-  line-height: 150%;
-  letter-spacing: 0;
-  color: var(--color-gray-950);
-}
-
-/* Author */
-@utility author {
+@utility typo-4 {
   font-family: var(--font-figtree);
   font-weight: var(--font-weight-extrabold);
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0;
-  color: var(--color-gray-950);
 }
 
 body {

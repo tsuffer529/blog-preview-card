@@ -3,7 +3,7 @@ import Image from "next/image";
 const Home = () => {
   return ( 
     <div className="flex justify-center items-center min-h-screen">
-      <main className="p-300 rounded-[20px] space-y-300 max-w-[327px] border border-gray-950 right-bottom-shadow bg-white">
+      <main className="p-300 rounded-[20px] space-y-300 max-w-[327px] sm:max-w-[384px] border border-gray-950 shadow-[8px_8px_0_rgba(0,0,0,1)] bg-white">
         <Image
           src={"/images/illustration-article.svg"}
           alt="illustration-article"
@@ -13,21 +13,21 @@ const Home = () => {
           className="rounded-[10px]"
         />
         <section className="space-y-150">
-          <h2 className="category px-150 py-50 rounded max-w-[73px] text-center bg-yellow">
+          <h2 className="typo-4 px-150 py-50 rounded inline-block bg-yellow text-gray-950">
             Learning
           </h2>
-          <p className="publish-date">
+          <p className="typo-3 text-gray-950">
             Published <time dateTime="2023-12-21">21 Dec 2023</time>
           </p>
-          <h1 className="title">
+          <h1 className="typo-1 text-gray-950 hover:text-yellow">
             HTML & CSS foundations
           </h1>
-          <p className="description">
+          <p className="typo-2 text-gray-500">
             These languages are the backbone of every website,
             defining structure, content, and presentation.
           </p>
         </section>
-        <address className="flex items-center space-x-150">
+        <div className="flex items-center space-x-150">
           <Image
             src="/images/image-avatar.webp"
             alt="avatar"
@@ -35,8 +35,8 @@ const Home = () => {
             height={32}
             quality={100}
           />
-          <span className="author not-italic">Greg Hooper</span>
-        </address>
+          <span className="typo-4">Greg Hooper</span>
+        </div>
       </main>
     </div>
   );

@@ -4,7 +4,7 @@ import "./globals.css";
 
 const figtree = Figtree({
   variable: "--font-figtree",
-  weight: ["800", "500"],
+  weight: ["500", "800"],
   subsets: ["latin"],
 });
 
