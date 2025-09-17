@@ -7,9 +7,6 @@
   --breakpoint-lg: 1440px;
 }
 
-@custom-variant sm (@media (min-width: theme(--breakpoint-sm)));
-@custom-variant lg (@media (min-width: theme(--breakpoint-lg)));
-
 /* color */
 @theme {
   --color-white: hsl(0, 0%, 100%);
